@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main{
+            height: 100vh;
+            width: auto;
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+            flex-direction: column;
+            background-color: black;
+            gap: 20px;
+        }
+        .box1{
+            height: 400px;
+            width: 1300px;
+            background-color: rgb(255, 187, 0);
+            border-radius: 0px 0px 50px 50px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            margin-left:30px ;
+        }
+     
+        .box2{
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin-top: 30px;
+        }
+        button{
+            color: black;
+            font-size: 20px;
+        }
+        button:nth-child(1){
+            height: 50px;
+            width: 150px;
+            border-radius: 20px;
+            border: none;
+            background-color: rgb(255, 187, 0);
+        }
+        button:nth-child(2){
+            height: 50px;
+            width: 150px;
+            border-radius: 20px;
+            border: none;
+            background-color: rgb(255, 187, 0);
+
+        }
+        button:nth-child(3){
+            height: 50px;
+            width: 150px;
+            border-radius: 20px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box1"><h1>Slide Toggle / Slide Up / Slide Down</h1></div>
+        <div class="box2">
+            <button id="one1">Slide Up</button>
+            <button id="one2">Slide Down</button>
+            <button id="one3">Slide Toggle</button>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+
+   $(document).ready(function(){
+    $("#one1").click(function(){
+        $(".box1").slideUp(2000)
+    })
+   })
+
+   $(document).ready(function(){
+    $("#one2").click(function(){
+    $(".box1").slideDown(2000)
+    })
+   })
+   $(document).ready(function(){
+    $("#one3").click(function(){
+    $(".box1").slideToggle(2000)
+    })
+   })
+</script>
+</html>
